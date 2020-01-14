@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+        .ellipsis {
+            overflow: hidden;
+            height: 100px;
+            line-height: 20px;
+            background-color: aliceblue;
+        }
+
+        .ellipsis::before {
+            content: "";
+            float: left;
+            width: 2em;
+            height: 100%;
+        }
+
+        .ellipsis>div {
+            float: right;
+            width: 100%;
+            margin-left: -2em;
+            line-height: inherit;
+        }
+
+        .ellipsis::after {
+            content: '...';
+            display: block;
+            float: right;
+            width: 2em;
+            position: relative;
+            line-height: inherit;
+            left: 100%;
+            transform: translate(0, -100%);
+            background: inherit;
+            padding-right: 50px;
+            margin-left: -50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Please change window size to make overflow</h1>
+    <div class="ellipsis">
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis necessitatibus temporibus rem animi quae
+            laborum nemo laboriosam fugit eligendi ipsam iure a quidem voluptatem ut iste repellat numquam fugiat
+            omnis, doloribus earum consequuntur hic vitae accusantium. Nesciunt, quas aliquam labore, consequuntur,
+            veritatis suscipit amet id dolore numquam magni ea consectetur.
+        </div>
+    </div>
+</body>
